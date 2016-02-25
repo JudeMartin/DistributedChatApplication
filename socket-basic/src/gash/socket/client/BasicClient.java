@@ -123,8 +123,11 @@ public class BasicClient {
 		try {
 			MessageBuilder builder = new MessageBuilder();
 			byte[] msg = builder.encode(MessageBuilder.MessageType.msg, name, message, null).getBytes();
-			socket.getOutputStream().write(msg);
-			socket.getOutputStream().flush();
+			int P = 10000;
+			while(P-- > 0){
+				socket.getOutputStream().write(msg);
+				socket.getOutputStream().flush();
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
