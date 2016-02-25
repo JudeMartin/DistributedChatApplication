@@ -126,7 +126,7 @@ public class BasicClient {
 			int P = 10000;
 			while(P-- > 0){
 				socket.getOutputStream().write(msg);
-				socket.getOutputStream().flush();
+				//socket.getOutputStream().flush();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

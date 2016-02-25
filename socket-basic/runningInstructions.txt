@@ -1,0 +1,6 @@
+/* First run the Server with the following command */
+	java -Xms500m -Xmx500m -classpath "classes:lib" gash.socket.server.ServerApp
+
+/* Next run the Client with the following command */	
+	java -Xms500m -Xmx500 -classpath "classes:lib" gash.socket.client.BasicClientApp
+	
